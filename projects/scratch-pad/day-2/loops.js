@@ -12,7 +12,9 @@
  */
 function printArrayValues(array) {
   // YOUR CODE BELOW HERE //
-  
+  for(var i = 0; i < array.length; i++){
+    console.log(array[i])
+  }
   
   
   
@@ -26,7 +28,9 @@ function printArrayValues(array) {
 function printArrayValuesInReverse(array) {
   // YOUR CODE BELOW HERE //
   
-  
+  for(var i = array.length - 1; i >= 0; i--){
+    console.log(array[i])
+  }
   
   
   // YOUR CODE ABOVE HERE //
@@ -37,8 +41,13 @@ function printArrayValuesInReverse(array) {
  */
 function getObjectKeys(object) {
   // YOUR CODE BELOW HERE //
+  const keysArray = [];
+
+  for (let key in object) {
+    keysArray.push(key);
+  }
   
-  
+  return keysArray;
   
   
   // YOUR CODE ABOVE HERE //
@@ -51,7 +60,9 @@ function getObjectKeys(object) {
 function printObjectKeys(object) {
   // YOUR CODE BELOW HERE //
   
-  
+  for (var key in object){
+    console.log(key)
+  }
   
   
   // YOUR CODE ABOVE HERE //
@@ -62,6 +73,13 @@ function printObjectKeys(object) {
  */
 function getObjectValues(object) {
   // YOUR CODE BELOW HERE //
+  var keysArray = [];
+
+for (var key in object) {
+  keysArray.push(object[key]);
+}
+
+return keysArray;
   
   
   
@@ -76,7 +94,9 @@ function getObjectValues(object) {
 function printObjectValues(object) {
   // YOUR CODE BELOW HERE //
   
-  
+  for(var key in object){
+    console.log(object[key])
+  }
   
   
   // YOUR CODE ABOVE HERE //
@@ -88,7 +108,14 @@ function printObjectValues(object) {
 function getObjectLength(object) {
   // YOUR CODE BELOW HERE //
   
-  
+  let count = 0;
+  for (const key in object) {
+    if (object.hasOwnProperty(key)) {
+      count++;
+    }
+  }
+  return count;
+
   
   
   // YOUR CODE ABOVE HERE //
@@ -101,8 +128,13 @@ function getObjectLength(object) {
 function printObjectValuesInReverse(object) {
   // YOUR CODE BELOW HERE //
   
-  
-  
+  const valuesArray = [];
+  for(var key in object){
+  valuesArray.push(object[key])
+  }
+  for (let i = valuesArray.length - 1; i >= 0; i--) {
+    console.log(valuesArray[i]);
+  }
   
   // YOUR CODE ABOVE HERE //
 }
